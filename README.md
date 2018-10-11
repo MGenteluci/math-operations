@@ -4,7 +4,7 @@ Math Operations is a module with lots of mathematical operations.
 
 ## Installation
 ```javascript
-npm install math-operations --save
+npm install math-operations
 ```
 
 ## Importing
