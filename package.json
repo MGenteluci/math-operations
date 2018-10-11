@@ -1,6 +1,6 @@
 {
   "name": "math-operations",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Module with lots of mathematical operations",
   "main": "index.js",
   "scripts": {

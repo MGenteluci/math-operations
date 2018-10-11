@@ -98,4 +98,19 @@ describe('Math-Operations Tests', () => {
     });
   });
 
+  describe('Bubble Sort tests: ', () => {
+    it('Assert that bubbleSorting [9, 3, 5, 7, 1] returns [1, 3, 5, 7, 9]', done => {
+      assert.deepStrictEqual(MathOps.bubbleSort([9, 3, 5, 7, 1]), [1, 3, 5, 7, 9]);
+      done();
+    });
+    it('Assert that bubbleSorting [0, 1, 2] returns [0, 1, 2]', done => {
+      assert.deepStrictEqual(MathOps.bubbleSort([0, 1, 2]), [0, 1, 2]);
+      done();
+    });
+    it('Assert that bubbleSorting [999, 2, 77, 5] returns [2, 5, 77, 999]', done => {
+      assert.deepStrictEqual(MathOps.bubbleSort([999, 2, 77, 5]), [2, 5, 77, 999]);
+      done();
+    });
+  });
+
 });
