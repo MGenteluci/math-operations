@@ -1,115 +1,91 @@
-const MathOps = require('./index');
-const assert = require('chai').assert;
+const mathOps = require('./index');
 
-describe('Math-Operations Tests', () => {
+describe('Math Operations\' tests: ', () => {
 
   describe('Factorial tests: ', () => {
-    it('Assert that factorial of 1 is equal to 1', done => {
-      assert.equal(MathOps.factorial(1), 1);
-      done();
+    test('Expect the factorial of 1 to be 1', () => {
+      expect(mathOps.factorial(1)).toBe(1);
     });
-    it('Assert that factorial of 3 is equal to 6', done => {
-      assert.equal(MathOps.factorial(3), 6);
-      done();
+    test('Expect the factorial of 3 to be 6', () => {
+      expect(mathOps.factorial(3)).toBe(6);
     });
-    it('Assert that factorial of 5 is equal to 120', done => {
-      assert.equal(MathOps.factorial(5), 120);
-      done();
+    test('Expect the factorial of 5 to be 120', () => {
+      expect(mathOps.factorial(5)).toBe(120);
     });
   });
 
   describe('Fibonacci tests: ', () => {
-    it('Assert that fibonacci of 0 is equal to 0', done => {
-      assert.equal(MathOps.fibonacci(0), 0);
-      done();
+    test('Expect the fibonacci of 0 to be 0', () => {
+      expect(mathOps.fibonacci(0)).toBe(0);
     });
-    it('Assert that fibonacci of 2 is equal to 1', done => {
-      assert.equal(MathOps.fibonacci(2), 1);
-      done();
+    test('Expect the fibonacci of 2 to be 1', () => {
+      expect(mathOps.fibonacci(2)).toBe(1);
     });
-    it('Assert that fibonacci of 8 is equal to 21', done => {
-      assert.equal(MathOps.fibonacci(8), 21);
-      done();
+    test('Expect the fibonacci of 8 to be 21', () => {
+      expect(mathOps.fibonacci(8)).toBe(21);
     });
-    it('Assert that fibonacci of 12 is equal to 144', done => {
-      assert.equal(MathOps.fibonacci(12), 144);
-      done();
+    test('Expect the fibonacci of 12 to be 144', () => {
+      expect(mathOps.fibonacci(12)).toBe(144);
     });
   });
 
   describe('Sum tests: ', () => {
-    it('Assert that the sum o 1 + 2 is equal to 3', done => {
-      assert.equal(MathOps.sum(1, 2), 3);
-      done();
+    test('Expect the sum of 1 + 2 to be 3', () => {
+      expect(mathOps.sum(1, 2)).toBe(3);
     });
-    it('Assert that the sum o 1 + 2 + 5 + 8 is equal to 16', done => {
-      assert.equal(MathOps.sum(1, 2, 5, 8), 16);
-      done();
+    test('Expect the sum of 1 + 2 + 5 + 8 to be 16', () => {
+      expect(mathOps.sum(1, 2, 5, 8)).toBe(16);
     });
   });
 
   describe('isPerfect tests: ', () => {
-    it('Assert that the number 6 is perfect', done => {
-      assert.equal(MathOps.isPerfect(6), true);
-      done();
+    test('Expect the number 6 to be perfect', () => {
+      expect(mathOps.isPerfect(6)).toBe(true);
     });
-    it('Assert that the number 8 isn\'t perfect', done => {
-      assert.equal(MathOps.isPerfect(8), false);
-      done();
+    test('Expect the number 8 not to be perfect', () => {
+      expect(mathOps.isPerfect(8)).toBe(false);
     });
-    it('Assert that the number 28 is perfect', done => {
-      assert.equal(MathOps.isPerfect(28), true);
-      done();
+    test('Expect the number 28 to be perfect', () => {
+      expect(mathOps.isPerfect(28)).toBe(true);
     });
-    it('Assert that the number 496 is perfect', done => {
-      assert.equal(MathOps.isPerfect(496), true);
-      done();
+    test('Expect the number 496 to be perfect', () => {
+      expect(mathOps.isPerfect(496)).toBe(true);
     });
-    it('Assert that the number 8128 is perfect', done => {
-      assert.equal(MathOps.isPerfect(8128), true);
-      done();
+    test('Expect the number 8128 to be perfect', () => {
+      expect(mathOps.isPerfect(8128)).toBe(true);
     });
-    it('Assert that the number 9000 isn\'t perfect', done => {
-      assert.equal(MathOps.isPerfect(9000), false);
-      done();
+    test('Expect the number 9000 not to be perfect', () => {
+      expect(mathOps.isPerfect(9000)).toBe(false);
     });
   });
 
   describe('isPrime tests: ', () => {
-    it('Assert that the number 6 isn\'t prime', done => {
-      assert.equal(MathOps.isPrime(6), false);
-      done();
+    test('Expect the number 6 not to be perfect', () => {
+      expect(mathOps.isPrime(6)).toBe(false);
     });
-    it('Assert that the number 7 is prime', done => {
-      assert.equal(MathOps.isPrime(7), true);
-      done();
+    test('Expect the number 7 to be perfect', () => {
+      expect(mathOps.isPrime(7)).toBe(true);
     });
-    it('Assert that the number 17 is prime', done => {
-      assert.equal(MathOps.isPrime(17), true);
-      done();
+    test('Expect the number 17 to be perfect', () => {
+      expect(mathOps.isPrime(17)).toBe(true);
     });
-    it('Assert that the number 26 isn\'t prime', done => {
-      assert.equal(MathOps.isPrime(26), false);
-      done();
+    test('Expect the number 26 not to be perfect', () => {
+      expect(mathOps.isPrime(26)).toBe(false);
     });
-    it('Assert that the number 97 is prime', done => {
-      assert.equal(MathOps.isPrime(97), true);
-      done();
+    test('Expect the number 97 to be perfect', () => {
+      expect(mathOps.isPrime(97)).toBe(true);
     });
   });
 
   describe('Bubble Sort tests: ', () => {
-    it('Assert that bubbleSorting [9, 3, 5, 7, 1] returns [1, 3, 5, 7, 9]', done => {
-      assert.deepStrictEqual(MathOps.bubbleSort([9, 3, 5, 7, 1]), [1, 3, 5, 7, 9]);
-      done();
+    test('Expect that bubleSorting [9, 3, 5, 7, 1] returns [1, 3, 5, 7, 9]', () => {
+      expect(mathOps.bubbleSort([9, 3, 5, 7, 1])).toEqual([1, 3, 5, 7, 9]);
     });
-    it('Assert that bubbleSorting [0, 1, 2] returns [0, 1, 2]', done => {
-      assert.deepStrictEqual(MathOps.bubbleSort([0, 1, 2]), [0, 1, 2]);
-      done();
+    test('Expect that bubleSorting [0, 1, 2] returns [0, 1, 2]', () => {
+      expect(mathOps.bubbleSort([0, 1, 2])).toEqual([0, 1, 2]);
     });
-    it('Assert that bubbleSorting [999, 2, 77, 5] returns [2, 5, 77, 999]', done => {
-      assert.deepStrictEqual(MathOps.bubbleSort([999, 2, 77, 5]), [2, 5, 77, 999]);
-      done();
+    test('Expect that bubleSorting [999, 2, 77, 5] returns [2, 5, 77, 999]', () => {
+      expect(mathOps.bubbleSort([999, 2, 77, 5])).toEqual([2, 5, 77, 999]);
     });
   });
 
