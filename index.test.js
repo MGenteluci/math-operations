@@ -89,4 +89,28 @@ describe('Math Operations\' tests: ', () => {
     });
   });
 
+  describe('isEven tests: ', () => {
+    test('Expect 2 to be even', () => {
+      expect(mathOps.isEven(2)).toBe(true);
+    });
+    test('Expect 3 not to be even', () => {
+      expect(mathOps.isEven(3)).toBe(false);
+    });
+    test('Expect 4248 to be even', () => {
+      expect(mathOps.isEven(4248)).toBe(true);
+    });
+  });
+
+  describe('isOdd tests: ' , () => {
+    test('Expect 1 to be odd', () => {
+      expect(mathOps.isOdd(1)).toBe(true);
+    });
+    test('Expect 8 not to be odd', () => {
+      expect(mathOps.isOdd(8)).toBe(false);
+    });
+    test('Expect 1331 to be odd', () => {
+      expect(mathOps.isOdd(1331)).toBe(true);
+    });
+  });
+
 });

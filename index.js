@@ -30,3 +30,7 @@ exports.isPrime = n => {
   }
   return sumOfDivisors === 2;
 };
+
+exports.isEven = number => number % 2 === 0;
+
+exports.isOdd = number => !this.isEven(number);
