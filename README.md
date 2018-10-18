@@ -50,3 +50,16 @@ Return true case the number sent as parameter is prime.
 ```javascript
 mathOps.isPrime(7);
 ```
+
+**Even or Odd**  
+Two different methods that return a boolean according to the parameter sent.
+
+##### Returns true case the number sent as parameter is an even number
+```javascript
+mathOps.isEven(4);
+```
+
+##### Returns true case the number sent as parameter is an odd number
+```javascript
+mathOps.isOdd(3);
+```

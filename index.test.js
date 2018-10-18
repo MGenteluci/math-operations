@@ -60,19 +60,19 @@ describe('Math Operations\' tests: ', () => {
   });
 
   describe('isPrime tests: ', () => {
-    test('Expect the number 6 not to be perfect', () => {
+    test('Expect the number 6 not to be prime', () => {
       expect(mathOps.isPrime(6)).toBe(false);
     });
-    test('Expect the number 7 to be perfect', () => {
+    test('Expect the number 7 to be prime', () => {
       expect(mathOps.isPrime(7)).toBe(true);
     });
-    test('Expect the number 17 to be perfect', () => {
+    test('Expect the number 17 to be prime', () => {
       expect(mathOps.isPrime(17)).toBe(true);
     });
-    test('Expect the number 26 not to be perfect', () => {
+    test('Expect the number 26 not to be prime', () => {
       expect(mathOps.isPrime(26)).toBe(false);
     });
-    test('Expect the number 97 to be perfect', () => {
+    test('Expect the number 97 to be prime', () => {
       expect(mathOps.isPrime(97)).toBe(true);
     });
   });
@@ -101,7 +101,7 @@ describe('Math Operations\' tests: ', () => {
     });
   });
 
-  describe('isOdd tests: ' , () => {
+  describe('isOdd tests: ', () => {
     test('Expect 1 to be odd', () => {
       expect(mathOps.isOdd(1)).toBe(true);
     });
