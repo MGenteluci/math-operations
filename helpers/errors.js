@@ -1,3 +1,3 @@
-exports.notANumber = number => {
-  throw new TypeError(`'${number}' is not a number`);
+exports.notANumber = value => {
+  throw new TypeError(`'${value}' is not a number`);
 };
