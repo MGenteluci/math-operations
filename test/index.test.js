@@ -1,6 +1,21 @@
-const mathOps = require('./index');
+const mathOps = require('../index');
 
 describe('Math Operations\' tests: ', () => {
+
+  describe('isNotANumber tests: ', () => {
+    test('Expect 3 to be a number', () => {
+      expect(mathOps.isNotANumber(3)).toBe(false);
+    });
+    test('Expect \'a\' not to be a number', () => {
+      expect(mathOps.isNotANumber('a')).toBe(true);
+    });
+    test('Expect 6 to be a number', () => {
+      expect(mathOps.isNotANumber(6)).toBe(false);
+    });
+    test('Expect \'6\' not to be a number', () => {
+      expect(mathOps.isNotANumber('6')).toBe(true);
+    });
+  });
 
   describe('Factorial tests: ', () => {
     test('Expect the factorial of 1 to be 1', () => {

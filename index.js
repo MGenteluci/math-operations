@@ -1,6 +1,28 @@
-exports.fibonacci = n => n === 0 ? 0 : n <= 2 ? 1 : this.fibonacci(n - 1) + this.fibonacci(n - 2);
+const error = require('./helpers/errors');
 
-exports.factorial = n => (n === 1 ? 1 : n * this.factorial(n - 1));
+exports.isNotANumber = value => typeof value !== 'number';
+
+exports.fibonacci = number => {
+  if (this.isNotANumber(number)) {
+    error.notANumber(number);
+  }
+
+  return number === 0 
+  ? 0 
+  : number <= 2 
+  ? 1 
+  : this.fibonacci(number - 1) + this.fibonacci(number - 2);
+};
+
+exports.factorial = number => {
+  if (this.isNotANumber(number)) {
+    error.notANumber(number);
+  }
+
+  return number === 1 
+  ? 1 
+  : number * this.factorial(number - 1);
+};
 
 exports.sum = (...args) => args.reduce((i, total) => (total += i));
 
@@ -16,6 +38,10 @@ exports.bubbleSort = arr => {
 };
 
 exports.isPerfect = n => {
+  if (this.isNotANumber(n)) {
+    error.notANumber(number);
+  }
+  
   let sumOfDivisors = 0;
   for (let i = 0; i < n; i++) {
     n % i === 0 ? (sumOfDivisors += i) : null;
@@ -24,6 +50,10 @@ exports.isPerfect = n => {
 };
 
 exports.isPrime = number => {
+  if (this.isNotANumber(number)) {
+    error.notANumber(number);
+  }
+
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
       return false;
@@ -32,6 +62,12 @@ exports.isPrime = number => {
   return true;
 };
 
-exports.isEven = number => number % 2 === 0;
+exports.isEven = number => {
+  if (this.isNotANumber(number)) {
+    error.notANumber(number);
+  }
+  
+  return number % 2 === 0;
+};
 
 exports.isOdd = number => !this.isEven(number);
