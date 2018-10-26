@@ -1,17 +1,19 @@
-const error = require('./helpers/errors');
+const error = require("./helpers/errors");
 
-exports.isNotANumber = value => typeof value !== 'number';
+exports.isNotANumber = value => typeof value !== "number";
+
+exports.biggerThanZero = value => value > 0;
 
 exports.fibonacci = number => {
   if (this.isNotANumber(number)) {
     error.notANumber(number);
   }
 
-  return number === 0 
-  ? 0 
-  : number <= 2 
-  ? 1 
-  : this.fibonacci(number - 1) + this.fibonacci(number - 2);
+  return number === 0
+    ? 0
+    : number <= 2
+      ? 1
+      : this.fibonacci(number - 1) + this.fibonacci(number - 2);
 };
 
 exports.factorial = number => {
@@ -19,12 +21,18 @@ exports.factorial = number => {
     error.notANumber(number);
   }
 
-  return number === 1 
-  ? 1 
-  : number * this.factorial(number - 1);
+  return number === 1 ? 1 : number * this.factorial(number - 1);
 };
 
 exports.sum = (...args) => args.reduce((i, total) => (total += i));
+
+exports.division = (quotion, patition) => {
+  if (this.biggerThanZero(patition)) {
+    return quotion / patition;
+  } else {
+    throw "Cannot complete a division with a zero";
+  }
+};
 
 exports.bubbleSort = arr => {
   for (let i = 0; i < arr.length; i++) {
@@ -41,7 +49,7 @@ exports.isPerfect = n => {
   if (this.isNotANumber(n)) {
     error.notANumber(number);
   }
-  
+
   let sumOfDivisors = 0;
   for (let i = 0; i < n; i++) {
     n % i === 0 ? (sumOfDivisors += i) : null;
@@ -66,7 +74,7 @@ exports.isEven = number => {
   if (this.isNotANumber(number)) {
     error.notANumber(number);
   }
-  
+
   return number % 2 === 0;
 };
 
