@@ -1,6 +1,6 @@
 {
   "name": "math-operations",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Module with lots of mathematical operations",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,6 @@
     "url": "https://github.com/MGenteluci/math-operations.git"
   },
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^24.9.0"
   }
 }
