@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prepublish": "npm test",
     "coverage": "jest --coverage"
   },
   "keywords": [
@@ -20,5 +19,8 @@
   },
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "jest": {
+    "verbose": true
   }
 }
